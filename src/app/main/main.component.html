@@ -1,0 +1,51 @@
+<header>
+    <mat-toolbar color='primary'>
+        <mat-icon>favorite</mat-icon>              
+        <span id="mytitle">My Favorites</span>
+        <mat-icon>favorite</mat-icon>
+        <span class="spacer"></span>    
+    </mat-toolbar>
+</header>
+<nav>
+  <mat-tab-group>    
+    <mat-tab label="Filmes"> 
+      <mat-card class="format-card">
+      <div *ngFor="let modelo of listaFilmes">
+        <mat-card-title>{{modelo.nome}} </mat-card-title> 
+        <mat-card-subtitle>{{modelo.ano}} - {{modelo.genero}} </mat-card-subtitle>        
+        <p><img [src]="modelo.imgUrl" alt="img"  width="200" height="100"></p>       
+      </div>
+    </mat-card> 
+    </mat-tab>
+      
+    <mat-tab label="Séries">
+      <mat-card class="format-card" >              
+        <div *ngFor="let modelo of listaSeries">           
+          <mat-card-title>{{modelo.nome}} </mat-card-title>           
+          <mat-card-subtitle>{{modelo.ano}} - {{modelo.genero}} </mat-card-subtitle>        
+          <p><img [src]="modelo.imgUrl" alt="img" width="200" height="110"></p>      
+        </div>
+      </mat-card>
+    </mat-tab>         
+    
+      <mat-tab label="Animes">                
+      <mat-card class="format-card">
+        <div *ngFor="let modelo of listaAnimes">           
+          <mat-card-title>{{modelo.nome}} </mat-card-title>             
+          <mat-card-subtitle>{{modelo.ano}} </mat-card-subtitle>        
+          <p><img [src]="modelo.imgUrl" alt="img" width="200" height="110"></p>
+        </div>
+      </mat-card>
+    </mat-tab>         
+    
+    <mat-tab label="Bandas">   
+      <mat-card class="format-card">
+        <div *ngFor="let modelo of listaBandas">           
+          <mat-card-title>{{modelo.nome}}</mat-card-title>             
+          <mat-card-subtitle>Primeiro Álbum: {{modelo.ano}}</mat-card-subtitle>       
+          <p><img [src]="modelo.imgUrl" alt="img" width="200" height="130"></p>
+        </div>
+      </mat-card>
+    </mat-tab>    
+  </mat-tab-group>      
+</nav>

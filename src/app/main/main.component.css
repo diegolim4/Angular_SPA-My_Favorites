@@ -1,0 +1,22 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+#mytitle{
+    margin: 25px ;
+    
+} 
+
+
+.format-card {
+  max-width: 100;
+  background: rgb(214, 222, 233);
+  text-align: center; 
+  
+}
+
+.example-header-image {
+  /*background-image: url('');*/
+  background-size:cover;  
+}
+
